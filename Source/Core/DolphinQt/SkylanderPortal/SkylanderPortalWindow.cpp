@@ -587,8 +587,10 @@ void SkylanderPortalWindow::CreateSkylanderAdvanced()
 
   auto* buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
   buttons->button(QDialogButtonBox::Ok)->setText(tr("Create"));
+  layout->addStretch();
   layout->addWidget(buttons);
 
+  create_window->setWindowTitle(tr("Create Custom Skylander"));
   create_window->setLayout(layout);
 
   connect(buttons, &QDialogButtonBox::accepted, this, [=, this] {
